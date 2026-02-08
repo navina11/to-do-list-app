@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f3f4f6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.todo-container {
+    background: #fff;
+    width: 360px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#themeToggle {
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #6366f1;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    background: #f1f1f1;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li.completed span {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.actions button {
+    margin-left: 5px;
+    padding: 6px 8px;
+    font-size: 12px;
+}
+
+.edit {
+    background: #f59e0b;
+}
+
+.complete {
+    background: #22c55e;
+}
+
+.delete {
+    background: #ef4444;
+}
+
+/* 🌙 Dark Mode */
+body.dark {
+    background: #111827;
+}
+
+body.dark .todo-container {
+    background: #1f2933;
+    color: #fff;
+}
+
+body.dark li {
+    background: #374151;
+}
+
+body.dark input {
+    background: #111827;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+
+/* 📱 Mobile Responsive */
+@media (max-width: 480px) {
+    .todo-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+
+    .input-group button {
+        width: 100%;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .actions {
+        align-self: flex-end;
+    }
+}
